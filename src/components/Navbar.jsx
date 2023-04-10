@@ -14,6 +14,13 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../context/CartContext";
+import { useAuthContext } from "../context/AutContext";
+import { useEffect } from "react";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { Badge } from "@mui/material";
+import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 
 const pages = [
   {
@@ -24,16 +31,26 @@ const pages = [
     title: "Product",
     link: "/list",
   },
+];
+
+const adminPages = [
   {
-    title: "Add Product",
+    title: "ADD PRODUCT",
     link: "/add",
   },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
+const settings = ["Profile", "Account", "Dashboard"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  //
+  const { cartLenght, getCart } = useCartContext();
+  const { user, logout, isAdmin } = useAuthContext();
+  useEffect(() => {
+    getCart();
+  });
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -51,18 +68,17 @@ function Navbar() {
   };
 
   return (
-    <AppBar
-      style={{ backgroundColor: "black", color: "white" }}
-      position="static"
-    >
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          <CatchingPokemonIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -73,7 +89,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            Games
+            GAMES
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -86,8 +102,10 @@ function Navbar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              //   color="inherit"
+
+            
               
+
             >
               <MenuIcon />
             </IconButton>
@@ -109,26 +127,43 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                  <Typography
-                    component={Link}
-                    to={page.link}
-                    textAlign="center"
-                  >
-                    {page.title}
-                  </Typography>
-                </MenuItem>
-              ))}
+              {isAdmin()
+                ? pages.concat(adminPages).map((page) => (
+                    <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                      <Typography
+                        component={Link}
+                        to={page.link}
+                        textAlign="center"
+                      >
+                        {page.title}
+                      </Typography>
+                    </MenuItem>
+                  ))
+                : pages.map((page) => (
+                    <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                      <Typography
+                        component={Link}
+                        to={page.link}
+                        textAlign="center"
+                      >
+                        {page.title}
+                      </Typography>
+                    </MenuItem>
+                  ))}
             </Menu>
           </Box>
+
           
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+
+          <CatchingPokemonIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+         
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -136,12 +171,13 @@ function Navbar() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              //   color: "inherit",
+              color: "inherit",
               textDecoration: "none",
             }}
           >
-            Games
+            GAMES
           </Typography>
+
           <Box
             sx={{
               flexGrow: 1,
@@ -160,9 +196,36 @@ function Navbar() {
               </Button>
             ))}
             
+
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {isAdmin()
+              ? pages.concat(adminPages).map((page) => (
+                  <Button
+                    key={page.title}
+                    component={Link}
+                    to={page.link}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}
+                  >
+                    {page.title}
+                  </Button>
+                ))
+              : pages.map((page) => (
+                  <Button
+                    key={page.title}
+                    component={Link}
+                    to={page.link}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}
+                  >
+                    {page.title}
+                  </Button>
+                ))}
+
           </Box>
             <Button component={Link} to="/cart" sx={{color:'inherit'}}> <ShoppingCartIcon/></Button>
           <Box sx={{ flexGrow: 0 }}>
+
           
             <Tooltip title="Open settings">
               
@@ -172,6 +235,32 @@ function Navbar() {
                 
               </IconButton>
             </Tooltip>
+
+            <IconButton
+              component={Link}
+              to="/cart"
+              size="large"
+              color="inherit"
+            >
+              {/* //! Корзина */}
+
+              <Badge badgeContent={cartLenght} color="error">
+                <ShoppingBasketIcon />
+              </Badge>
+            </IconButton>
+            {user ? (
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt={user.displayName} src={user.photoURL} />
+                </IconButton>
+              </Tooltip>
+            ) : (
+              <Button component={Link} to="/auth" color="inherit">
+                Login
+              </Button>
+            )}
+
+
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
@@ -194,6 +283,14 @@ function Navbar() {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
+              <MenuItem
+                onClick={() => {
+                  handleCloseUserMenu();
+                  logout();
+                }}
+              >
+                <Typography textAlign="center">Logaut</Typography>
+              </MenuItem>
             </Menu>
             
           </Box>
