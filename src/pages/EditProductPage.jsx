@@ -62,42 +62,70 @@ function EditProductPage() {
 
   return (
     <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <h1 style={{ textAlign: "center" }}>Edit Product</h1>
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        style={{
+          maxWidth: "500px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          marginTop: "100px",
+        }}
+      >
         <TextField
           value={formValue.title}
-          style={{ backgroundColor: "grey" }}
+          onChange={(e) => handleChance(e)}
+          className="textfild"
           name="title"
           // id="standard-basic"
-          label="TITLE"
+          label="Title"
           variant="standard"
         />
         <TextField
           value={formValue.description}
-          style={{ backgroundColor: "grey" }}
+          onChange={(e) => handleChance(e)}
+          className="textfild"
           name="description"
           // id="standard-basic"
-          label="DESCRIPTOIN"
+          label="Description"
           variant="standard"
         />
         <TextField
           value={formValue.price}
-          style={{ backgroundColor: "grey" }}
+          onChange={(e) => handleChance(e)}
+          className="textfild"
           name="price"
           // id="standard-basic"
-          label="PRICE"
+          label="Price"
+          variant="standard"
+        />
+        <TextField
+          value={formValue.category}
+          onChange={(e) => handleChance(e)}
+          className="textfild"
+          name="category"
+          label="Category"
           variant="standard"
         />
 
         <TextField
           value={formValue.image}
-          // onChange={(e) => handleChance(e)}
-          style={{ backgroundColor: "grey" }}
+          onChange={(e) => handleChance(e)}
+          className="textfild"
           name="image"
           // id="standard-basic"
-          label="IMAGE"
+          label="Image"
           variant="standard"
         />
-        <Button style={{ backgroundColor: "black" }}>Add</Button>
+        <Button
+          variant="contained"
+          type="submit"
+          style={{ backgroundColor: "grey" }}
+        >
+          Save
+        </Button>
       </form>
     </div>
   );

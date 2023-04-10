@@ -6,13 +6,13 @@ import {
   Select,
   TextField,
 } from "@mui/material";
-import fon from "./image/fon.jpg";
+// import fon from "./image/fon.jpg";
 import "./style.css";
 import React, { useState } from "react";
 import { useProductContext } from "../context/ProductContext";
 
 function AddProductPage() {
-  <img src={fon} />;
+  // <img src={fon} />;
   const { addProduct } = useProductContext();
   const [formValue, setFormValue] = useState({
     title: "",
@@ -54,9 +54,9 @@ function AddProductPage() {
   }
 
   return (
-    <div>
+    <div className="img">
       <h1 style={{ textAlign: "center", marginTop: "70px" }}>
-        Гоу Добавим новые Игры
+        Go Add New Games
       </h1>
       <form
         onSubmit={(e) => handleSubmit(e)}
@@ -72,7 +72,7 @@ function AddProductPage() {
         <TextField
           value={formValue.title}
           onChange={(e) => handleChance(e)}
-          style={{ backgroundColor: "grey" }}
+          className="textfild"
           name="title"
           label="TITLE"
           variant="standard"
@@ -80,7 +80,7 @@ function AddProductPage() {
         <TextField
           value={formValue.description}
           onChange={(e) => handleChance(e)}
-          style={{ backgroundColor: "grey" }}
+          className="textfild"
           name="description"
           label="DESCRIPTOIN"
           variant="standard"
@@ -88,7 +88,7 @@ function AddProductPage() {
         <TextField
           value={formValue.price}
           onChange={(e) => handleChance(e)}
-          style={{ backgroundColor: "grey" }}
+          className="textfild"
           name="price"
           label="PRICE"
           variant="standard"
@@ -97,28 +97,34 @@ function AddProductPage() {
           <InputLabel id="demo-simple-select-label">Category</InputLabel>
           <Select
             labelId="demo-simple-select-label"
-            id="demo-simple-select"
             value={formValue.category}
+            className="textfild"
             label="Category"
             name="category"
             onChange={(e) => handleChance(e)}
-            style={{ backgroundColor: "grey" }}
           >
-            <MenuItem value={"men's clothing"}>Men</MenuItem>
-            <MenuItem value={"women's clothing"}>Women</MenuItem>
-            <MenuItem value={"jewelery"}>Jewelery</MenuItem>
-            <MenuItem value={"electronics"}>Electronics</MenuItem>
+            <MenuItem value={"action adventure"}>Action adventure</MenuItem>
+            <MenuItem value={"race"}>Race</MenuItem>
+            <MenuItem value={"action"}>Action</MenuItem>
+            <MenuItem value={"shooting games"}>Shooting Games</MenuItem>
+            <MenuItem value={"zombie"}>Zombie</MenuItem>
+            <MenuItem value={"battle royale"}>Battle Royale</MenuItem>
+            <MenuItem value={"casual"}>Casual</MenuItem>
           </Select>
         </FormControl>
         <TextField
           value={formValue.image}
           onChange={(e) => handleChance(e)}
-          style={{ backgroundColor: "grey" }}
+          className="textfild"
           name="image"
           label="IMAGE"
           variant="standard"
         />
-        <Button type="submit" style={{ backgroundColor: "black" }}>
+        <Button
+          type="submit"
+          className="button"
+          style={{ borderRadius: "50%" }}
+        >
           Add
         </Button>
       </form>

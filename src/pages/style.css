@@ -1,6 +1,92 @@
-body {
+/* body {
+  /* max-width: 1280px;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+/* background-image: url("https://oir.mobi/uploads/posts/2021-03/1616592153_49-p-krasivii-fon-dlya-prevyu-57.jpg"); */
+/* }  */
+
+/* img {
   max-width: 1280px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("https://oir.mobi/uploads/posts/2021-03/1616592153_49-p-krasivii-fon-dlya-prevyu-57.jpg");
+} */
+
+/* abbBar */
+.MuiContainer-root {
+  background: rgb(52, 52, 64);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 52, 64, 1) 1%,
+    rgba(51, 44, 156, 1) 50%,
+    rgba(16, 21, 47, 1) 100%
+  );
+}
+/*? поменяли цвет текста input в AddProductpage */
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  padding: 7px 30px !important;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 15px 30px !important;
+}
+
+/* AddProductPage - input- description*/
+.textfild {
+  /* background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 9%,
+    rgba(64, 67, 219, 1) 50%,
+    rgba(0, 0, 0, 1) 97%
+  ); */
+  background: rgb(213, 213, 223);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 213, 223, 1) 0%,
+    rgba(43, 29, 253, 1) 50%,
+    rgba(195, 199, 224, 1) 100%
+  );
+  border-radius: 3px;
+}
+
+.search {
+  background: rgb(213, 213, 223);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 213, 223, 1) 0%,
+    rgba(43, 29, 253, 1) 50%,
+    rgba(195, 199, 224, 1) 100%
+  );
+  display: flex;
+  border-radius: 5%;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  border-radius: 50%;
+}
+
+.css-1ld3b9g-MuiGrid-root .MuiGrid-item {
+  padding-left: 140px !important;
+}
+
+.button {
+  background: rgb(18, 8, 214);
+  background: linear-gradient(
+    164deg,
+    rgba(18, 8, 214, 1) 36%,
+    rgba(3, 11, 222, 1) 86%
+  );
+}
+@keyframes card {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  70% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.5, 0.5);
+  }
 }
