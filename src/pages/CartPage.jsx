@@ -1,3 +1,22 @@
+
+import * as React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import { useCartContext } from '../context/CartContext';
+import { Button, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import { Link } from 'react-router-dom';
+
+export default function CartPage() {
+
+  return (
+    <TableContainer sx={{ padding:'10px'}} component={Paper}>
+
 import * as React from "react";
 import { Table, Button, Typography } from "@mui/material";
 import TableBody from "@mui/material/TableBody";
@@ -26,6 +45,22 @@ export default function CartPage() {
             <TableCell align="right">Sub Price</TableCell>
           </TableRow>
         </TableHead>
+
+       
+        
+          
+          </Table>
+          <Box sx={{display:'flex',justifyContent:'space-between',width:'100%' }} >
+          <Typography variant='h4'>
+            
+          </Typography>
+          <Button component={Link} to="/success" variant='contained'>Buy</Button>
+          </Box>
+      
+    </TableContainer>
+  );
+}
+
         <TableBody>
           {cart.products.map((item) => (
             <TableRow

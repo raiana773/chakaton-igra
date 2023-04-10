@@ -1,3 +1,14 @@
+
+import React from 'react'
+
+function CartContext() {
+  return (
+    <div>CartContext</div>
+  )
+}
+
+export default CartContext
+
 import React, { createContext, useContext, useEffect, useReducer } from "react";
 import { ACTIONS } from "../utils/consts";
 import { notify } from "../components/Toastify";
@@ -142,3 +153,4 @@ function CartContext({ children }) {
 }
 
 export default CartContext;
+
