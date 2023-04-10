@@ -20,6 +20,7 @@ export default function ProductCard({ item }) {
         flexDirection: "column",
         maxWidth: "200px",
         maxHeight: "300px",
+        
       }}
     >
       <CardMedia
