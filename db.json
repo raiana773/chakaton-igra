@@ -80,7 +80,7 @@
       "title": "Pokemon Go",
       "price": "67.87",
       "description": "Всё просто: ловить и тренировать покемонов. Игра работает по принципу дополненной реальности. Игрок смотрит на окружающий мир через камеру смартфона, глядя на дисплей, а программа накладывает на привычные пейзажи слой виртуальных объектов: Покемонов, которые появляются на карте, в зависимости от известных только разработчикам критериев;Покестопы — места, где можно получить шары для ловли покемонов и полезные предметы; Специальные площадки, где можно тренировать покемонов после достижения определённого уровня.",
-      "category": "battle royale",
+      "category": "casual",
       "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/cd/cde5f0fe-f8c3-45f0-ba62-0042e41beda9.jpg",
       "id": 13
     },
@@ -107,6 +107,118 @@
       "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/b3/b3714ed4585c7e59fdea99284420dc4d.jpg",
       "category": "battle royale",
       "id": 16
+    },
+    {
+      "title": "The Last of Us Part II",
+      "price": "200.5",
+      "description": "The Last of Us Part II представляет собой приключенческий боевик с элементами survival horror и стелс-экшена от третьего лица. Игрок может использовать огнестрельное и самодельное оружие, лук против враждебно настроенных представителей других фракций и заражённых грибком кордицепсом.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/bf/bfd81f90472b280c5f3316d52cda4ee8.jpeg",
+      "category": "action adventure",
+      "id": 23
+    },
+    {
+      "title": "The Legend of Zelda ",
+      "price": "36.78",
+      "description": "Сюжет игры повествует о мальчике по имени Линк, который стремится спасти принцессу Зельду из рук принца Тьмы Ганона, при этом ему нужно собрать магический артефакт Трифорс.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/32/323415d3112a592fa0c6bad35e078bb4.jpg",
+      "category": "action adventure",
+      "id": 24
+    },
+    {
+      "title": "God of War",
+      "price": "56",
+      "description": "Главные герои игры — спартанский воитель-полубог Кратос и его сын Атрей. Кратос — сын Зевса, ставший греческим богом войны, — поселился после разрушения Олимпа на далёком севере, где встретил свою вторую жену, умершую незадолго до событий игры, — женщину-воина Фэй, которая родила от спартанца сына Атрея.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/f7/f74d045c9b533d3613a2cc670855818b.jpg",
+      "category": "action",
+      "id": 25
+    },
+    {
+      "title": "Marvel's Guardians ",
+      "price": "300",
+      "description": "Marvel's Guardians of the Galaxy - это сюжетно-ориентированная игра с видом от третьего лица, рассказывающая историю о команде супергероев под названием \"Стражи Галактики\". Игра никак не относится к фильмам из Marvel Cinematic Universe, и предлагает совершенно новый взгляд на знакомых героев.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/e2/e234dd302378c9e384fbd194fc64d519.jpg",
+      "category": "action",
+      "id": 26
+    },
+    {
+      "title": "Super Smash Bros.",
+      "price": "78",
+      "description": "Super Smash Bros. Ultimate - аркадный файтинг для Nintendo Switch, включающий в себя разнообразных персонажей из всех серий Nintendo. Ultimate-версия файтинга позволит игрокам сыграть за всех героев предыдущих частей, а также даст возможность опробовать нескольких новых бойцов.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/96/9689a8ad11f4dfe361d4aab66d6c7154.jpg@jpg",
+      "category": "casual",
+      "id": 27
+    },
+    {
+      "title": "MultiVersus",
+      "price": "56",
+      "description": "MultiVersus - это платформер-файтинг со способом распространения free-to-play, в котором вы можете объединяться в команды и сражаться в легендарных вселенных, используя культовых персонажей. Присоединяйтесь к нам во 2-м сезоне и попробуйте новые режимы игры!",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/ca/cad14d8e-4d09-441c-adaa-b7d6a4718f9d.jpg@jpg",
+      "category": "casual",
+      "id": 28
+    },
+    {
+      "title": "Apex Legends",
+      "price": "67",
+      "description": "Apex Legends — это многопользовательская онлайн-игра в жанре «королевская битва», которая сталкивает на одной карте до 60 игроков, действующих группами по три человека — всего до двадцати команд. Помимо основного режима, присутствуют также режимы \"Арены\" (битва 3 на 3) и \"Контроль\" (захват 3 точек).",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/97/977ae37f2e5162e107ce954d21d98fbd.jpg",
+      "category": "battle royale",
+      "id": 29
+    },
+    {
+      "title": "PUBG",
+      "price": "370.88",
+      "category": "battle royale",
+      "description": "PUBG: Battlegrounds (ранее известная как PlayerUnknown's Battlegrounds) — многопользовательская онлайн-игра в жанре королевской битвы, разрабатываемая и издаваемая студией PUBG Corporation, дочерней компанией корейского издателя Krafton, ранее известного как Bluehole.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/a1/a12d6b9c4f5dfc77acdc25230220a6d1.jpg",
+      "id": 30
+    },
+    {
+      "title": "Call of Duty: Warzone",
+      "price": "45.99",
+      "description": "Warzone позволяет вести многопользовательскую онлайн-борьбу на одном поле боя вне зависимости от платформы между 150—200 игроками, находящимися в вымышленном городе Верданск.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/a0/a0223404517b3aaef94e518b49e8e2d1.jpg",
+      "category": "battle royale",
+      "id": 31
+    },
+    {
+      "title": "Tom Clancy's Ghost ",
+      "price": "99.99",
+      "category": "battle royale",
+      "description": "«Tom Clancy's Ghost Recon» — серия трёхмерных компьютерных игр в жанре тактических шутеров, посвящённых похождениям отряда спецназначения «Призраки». Сюжет написан игровым сценаристом Томом Клэнси. Игры серии Tom Clancy's Ghost Recon создаются компанией Red Storm Entertainment и издаются Ubisoft.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/de/de24499f-1fbf-4ba5-bec0-89c61cb56b44.webp",
+      "id": 32
+    },
+    {
+      "title": "Hi-Fi Rush",
+      "price": "67",
+      "description": "гра — музыкальный слешер, обогащенный платформингом с щепоткой исследования. Главная черта проекта – ритм, которому подчинён мир Hi-Fi Rush. Каждый его элемент движется и живет в такт играющей на фоне музыки.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/22/22878a81-30ee-4aff-83e1-e1f0edd8657e.webp",
+      "category": "casual",
+      "id": 33
+    },
+    {
+      "title": "Spec Ops: The Line",
+      "price": "67.99",
+      "description": "Spec Ops: The Line — шутер от третьего лица, объединяющий под собой напряженные перестрелки и командную механику ведения боя. Игрок возглавляет отряд из трех персонажей — капитана Мартина Уокера, лейтенанта Адамса и сержанта Люго.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/f6/f6121d10-3215-44e1-a9d2-e704e092e43f.jpg",
+      "category": "casual",
+      "id": 34
+    },
+    {
+      "title": "Plants vs. Zombies",
+      "price": "76",
+      "description": "Plants vs. Zombies: Garden Warfare представляет собой многопользовательский командный шутер от третьего лица, где игрок управляет фракциями Растений или Зомби в совместной игре или в мультиплеере. В игре восемь классов, по четыре на каждую фракцию.",
+      "image": "https://virtus-img.cdnvideo.ru/images/game-card/plain/bf/bf441c23-a177-42f6-bcd2-bc5beb81199f.jpg",
+      "category": "zombie",
+      "id": 35
+    },
+    {
+      "title": "xytukf ilo",
+      "price": "cykuvblkjnl",
+      "description": "ghjblkl;",
+      "image": "jyxcguh",
+      "category": "action",
+      "id": 36
     }
   ]
 }

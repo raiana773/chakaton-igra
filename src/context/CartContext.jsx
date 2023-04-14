@@ -44,7 +44,6 @@ function CartContext({ children }) {
   function getCart() {
     const data = getDataFromLS();
     const quantity = data.products.reduce((acc, item) => acc + item.count, 0);
-    console.log(quantity);
     dispatch({
       type: ACTIONS.cartLenght,
       payload: quantity,

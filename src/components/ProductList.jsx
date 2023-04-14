@@ -13,22 +13,25 @@ import ProductCard from "./ProductCard";
 import { useProductContext } from "../context/ProductContext";
 import { useSearchParams } from "react-router-dom";
 import { LIMIT } from "../utils/consts";
+import "./components.css";
+import fon from "./image/fon.jpg";
 
 function ProductList() {
+  <img src={fon} />;
   const { products, getProducts, pageTotalCount } = useProductContext();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [inputValue, setInputValue] = useState(
+  const [inputVal, setInputVal] = useState(
     searchParams.get("title_like") || ""
   );
   const [category, setCategory] = useState(
     searchParams.get("category") || "all"
   );
-  const [page, setPage] = useState(+searchParams.get("_page"));
-  const [firstMount, setFirstMount] = useState(true);
-
+  const [page, setPage] = useState(+searchParams.get("_page") || 1);
   useEffect(() => {
     getProducts();
   }, [searchParams]);
+
+  const [firstMount, setFirstMount] = useState(true);
 
   useEffect(() => {
     if (firstMount) {
@@ -37,31 +40,31 @@ function ProductList() {
     }
     if (category === "all") {
       setSearchParams({
-        really_like: inputValue,
+        title_like: inputVal,
         _limit: LIMIT,
         _page: 1,
       });
     } else {
       setSearchParams({
-        title_like: inputValue,
+        title_like: inputVal,
         category: category,
         _limit: LIMIT,
         _page: 1,
       });
     }
     setPage(1);
-  }, [inputValue, category]);
+  }, [inputVal, category]);
 
   useEffect(() => {
     if (category === "all") {
       setSearchParams({
-        title_like: inputValue,
+        title_like: inputVal,
         _limit: LIMIT,
         _page: page,
       });
     } else {
       setSearchParams({
-        title_like: inputValue,
+        title_like: inputVal,
         category: category,
         _limit: LIMIT,
         _page: page,
@@ -74,24 +77,33 @@ function ProductList() {
       setPage(pageTotalCount);
     }
   }, [pageTotalCount]);
+  console.log(pageTotalCount);
 
   return (
     <div
+      className="list"
       style={{
         display: "flex",
         justifyContent: "center",
         flexWrap: "wrap",
-        gap: "50px",
+        gap: "80px",
+        backgroundColor: "linear-gradient(  grey, blue, grey)",
       }}
     >
-      <Box style={{ display: "flex" }}>
+      <Box
+        style={{
+          display: "flex",
+          marginTop: "10%",
+          marginRight: "20px",
+        }}
+      >
         <TextField
-          onChange={(e) => setInputValue(e.target.value)}
-          value={inputValue}
+          onChange={(e) => setInputVal(e.target.value)}
+          value={inputVal}
           label="Search..."
           className="search"
           variant="standard"
-          style={{ width: "760px", marginLeft: "400px" }}
+          style={{ width: "650%", marginRight: "15px" }}
         />
         <FormControl fullWidth>
           <InputLabel className="search" id="demo-simple-select-label">
@@ -103,7 +115,7 @@ function ProductList() {
             className="search"
             value={category}
             label="Categoty"
-            style={{ width: "200px" }}
+            style={{ width: "450%" }}
             onChange={(e) => setCategory(e.target.value)}
           >
             <MenuItem value={"all"}>All</MenuItem>
@@ -123,14 +135,15 @@ function ProductList() {
           return <ProductCard key={item.id} item={item} />;
         })}
       </Grid>
-      {/* <Box sx={{ maxWidth: "max-content", margin: "20px auto" }}> */}
-      <Pagination
-        onChange={(e, p) => setPage(p)}
-        page={page}
-        color="primary"
-        count={pageTotalCount}
-      />
-      {/* </Box> */}
+
+      <Box sx={{ maxWidth: "max-content", margin: "20px auto" }}>
+        <Pagination
+          onChange={(e, p) => setPage(p)}
+          page={page}
+          color="primary"
+          count={pageTotalCount}
+        />
+      </Box>
     </div>
   );
 }

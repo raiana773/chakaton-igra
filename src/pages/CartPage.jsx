@@ -19,11 +19,11 @@ export default function CartPage() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Title</TableCell>
-            <TableCell align="right">Image</TableCell>
-            <TableCell align="right">Category</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Sub Price</TableCell>
+            <TableCell>Заголовок</TableCell>
+            <TableCell align="center">Фото</TableCell>
+            <TableCell align="right">Категория</TableCell>
+            <TableCell align="right">Цена</TableCell>
+            <TableCell align="right">Дополнительная цена</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -36,7 +36,7 @@ export default function CartPage() {
                 {item.title}
               </TableCell>
               <TableCell align="right">
-                <img width={50} src={item.image} alt="" />
+                <img width={200} src={item.image} alt="" />
               </TableCell>
               <TableCell align="right">{item.category}</TableCell>
               <TableCell align="right">{item.price}</TableCell>
@@ -63,7 +63,7 @@ export default function CartPage() {
           ))}
 
           <Typography variant="h4">
-            Total price: ${cart.totalPrice.toFixed(2)}
+            Общая цена: ${cart.totalPrice.toFixed(2)}
           </Typography>
         </TableBody>
       </Table>

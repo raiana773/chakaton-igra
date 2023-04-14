@@ -8,6 +8,7 @@ import ListProductPage from "../pages/ListProductPage";
 import DetailsProductPage from "../pages/DetailsProductPage";
 import CartPage from "../pages/CartPage";
 import AuthPage from "../pages/AuthPage";
+import PayPage from "../pages/PayPage";
 
 function MainRoutes() {
   return (
@@ -19,6 +20,7 @@ function MainRoutes() {
         <Route path="/edit/:id" element={<EditProductPage />} />
         <Route path="/details/:id" element={<DetailsProductPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/pay" element={<PayPage />} />
       </Route>
       <Route path="/auth" element={<AuthPage />} />
     </Routes>

@@ -1,0 +1,49 @@
+/* ProductList */
+.list {
+  max-width: 100%;
+  /* max-height: 4000px; */
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  /* display: block; */
+  background-image: url("https://kartinkin.net/uploads/posts/2022-12/1669954462_6-kartinkin-net-p-belii-fon-dlya-saita-krasivo-6.jpg");
+}
+
+/* .second {
+  /* background-image: url("https://top-fon.com/uploads/posts/2023-01/1674723673_top-fon-com-p-belii-poluprozrachnii-fon-dlya-prezentatsi-190.jpg"); */
+/* } */
+
+/* footer */
+.containerLS {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+  background: rgb(52, 52, 64);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 52, 64, 1) 1%,
+    rgba(51, 44, 156, 1) 50%,
+    rgba(16, 21, 47, 1) 100%
+  );
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  width: 400px;
+}
+
+.of_games a {
+  color: var(--secondary-color);
+  font-size: var(--nav-size);
+  text-decoration: none;
+  /* margin-left: 100px; */
+  margin-right: 250px;
+}
+
+.of_games a:hover {
+  color: var(--primary-color);
+}

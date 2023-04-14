@@ -6,30 +6,23 @@ a {
   text-decoration: none;
   color: unset;
 }
-/* .carousel {
-  padding-left: 0px;
-  padding-right: 0px;
-} */
 
 .css-1oqqzyl-MuiContainer-root {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
 
-/* .MuiCarousel-root {
-  width: 1300px;
-  height: 1300px;
-} */
+/*  */
 
-@media (min-width: 1500px) {
+/* @media (min-width: 1500px) {
   .css-1oqqzyl-MuiContainer-root {
     padding-left: 0px !important;
     padding-right: 0px !important;
     max-width: 0px !important;
   }
-}
+} */
 
-@keyframes card {
+/* @keyframes card {
   0% {
     transform: scale(0.5, 0.5);
   }
@@ -42,4 +35,4 @@ a {
   100% {
     transform: scale(0.5, 0.5);
   }
-}
+} */

@@ -1,20 +1,36 @@
-/* body {
-  /* max-width: 1280px;
+/* addProductPage */
+.img {
+  max-width: 1250%;
+
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 
-/* background-image: url("https://oir.mobi/uploads/posts/2021-03/1616592153_49-p-krasivii-fon-dlya-prevyu-57.jpg"); */
-/* }  */
+  background-image: url("https://www.funnyart.club/uploads/posts/2022-02/1645082525_58-www-funnyart-club-p-belii-igrovoi-fon-krasivo-64.jpg");
+}
+/* AuthPage */
+.auth {
+  max-width: 1100%;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-image: url("https://phonoteka.org/uploads/posts/2021-04/1618685017_5-phonoteka_org-p-igrovoi-fon-dlya-saita-5.png");
+}
 
-/* img {
+/* cart */
+img {
   max-width: 1280px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://oir.mobi/uploads/posts/2021-03/1616592153_49-p-krasivii-fon-dlya-prevyu-57.jpg");
-} */
+  background-image: url("https://static.tildacdn.com/tild3466-6436-4266-b864-356236386437/tech-11.jpg");
+}
 
+/* AuthPage */
+/* .MuiInputBase-formControl
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  /* max-width: 100px !important; */
+/* margin-top: -15px; */
+/* }  */
 /* abbBar */
-.MuiContainer-root {
+.appbar {
   background: rgb(52, 52, 64);
   background: linear-gradient(
     90deg,
@@ -49,17 +65,22 @@
   border-radius: 3px;
 }
 
+/* productList */
 .search {
-  background: rgb(213, 213, 223);
-  background: linear-gradient(
-    90deg,
-    rgba(213, 213, 223, 1) 0%,
-    rgba(43, 29, 253, 1) 50%,
-    rgba(195, 199, 224, 1) 100%
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(254, 251, 252, 1) 100%
   );
   display: flex;
   border-radius: 5%;
 }
+.css-q8hpuo-MuiFormControl-root {
+  /* width: 0px !important; */
+  margin-right: 140px !important;
+}
+
 .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   border-radius: 50%;
 }
@@ -76,7 +97,86 @@
     rgba(3, 11, 222, 1) 86%
   );
 }
-@keyframes card {
+
+.footer_list {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+/* payPage */
+.marvel {
+  max-width: 1280%;
+  max-height: 1200%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-03/1614602269_66-p-belii-sportivnii-fon-76.jpg");
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 200px;
+  padding: 3.9%;
+  /* background-color: #f7f7f7; */
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18.5%;
+  width: 100%;
+}
+
+.form-label {
+  margin-bottom: 5%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input {
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-button {
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color;
+}
+
+.details {
+  max-width: 1280%;
+  max-height: 1200%;
+  /* background-repeat: no-repeat; */
+  background-image: url("https://get.wallhere.com/photo/knight-darkness-screenshot-armour-2560x1600-px-computer-wallpaper-pc-game-Assasins-Creed-Syndicate-action-figure-cg-artwork-847880.jpg");
+}
+
+.papji {
+  max-width: 1280%;
+  max-height: 1200%;
+  background-repeat: no-repeat;
+  background-image: url("https://klike.net/uploads/posts/2022-11/1669365418_3-55.jpg");
+}
+
+/* @keyframes card {
   0% {
     transform: scale(0.5, 0.5);
   }
@@ -89,4 +189,4 @@
   100% {
     transform: scale(0.5, 0.5);
   }
-}
+} */

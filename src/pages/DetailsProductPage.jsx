@@ -10,8 +10,12 @@ import {
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useProductContext } from "../context/ProductContext";
+import { Player } from "video-react";
+import "./style.css";
+import details from "./image/games.jpg";
 
 function DetailsProductPage() {
+  <img src={details} />;
   const { oneProduct, getOneProduct } = useProductContext();
   const { id } = useParams();
   useEffect(() => {
@@ -24,13 +28,23 @@ function DetailsProductPage() {
   //   }
 
   return (
-    <>
+    <div
+      className="details"
+      style={{ display: "flex", justifyContent: "center" }}
+    >
       {oneProduct ? (
-        <Card sx={{ display: "flex", maxWidth: "800px" }}>
+        <Card
+          sx={{
+            display: "flex",
+            maxWidth: "65%",
+            marginTop: "115px",
+            marginBottom: "15%",
+          }}
+        >
           <CardMedia
             component="img"
             alt="green iguana"
-            sx={{ width: "300px" }}
+            sx={{ width: "400px" }}
             // height="140"
             image={oneProduct.image}
           />
@@ -55,7 +69,14 @@ function DetailsProductPage() {
       ) : (
         <h1>Loading...</h1>
       )}
-    </>
+      {/* <div>
+        <Player
+          playsInline
+          poster="/assets/poster.png"
+          src="C:\Users\LENOVO\Desktop\makers\Хакатон\internet-magazin-sonos1\src\video\Игра Fox Legends - Трейлер.mp4"
+        />
+      </div> */}
+    </div>
   );
 }
 

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useProductContext } from "../context/ProductContext";
-import { Button, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
+import "./style.css";
+import papji from "./image/games.jpg";
 
 function EditProductPage() {
+  <img src={papji} />;
   const { oneProduct, getOneProduct, editProduct } = useProductContext();
 
   const { id } = useParams();
@@ -61,7 +64,8 @@ function EditProductPage() {
   }
 
   return (
-    <div>
+    <Box className="papji">
+      <br />
       <h1 style={{ textAlign: "center" }}>Edit Product</h1>
       <form
         onSubmit={(e) => handleSubmit(e)}
@@ -71,7 +75,7 @@ function EditProductPage() {
           display: "flex",
           flexDirection: "column",
           gap: "10px",
-          marginTop: "100px",
+          marginTop: "85px",
         }}
       >
         <TextField
@@ -127,7 +131,7 @@ function EditProductPage() {
           Save
         </Button>
       </form>
-    </div>
+    </Box>
   );
 }
 

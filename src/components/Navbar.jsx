@@ -19,22 +19,22 @@ import { useEffect } from "react";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Badge } from "@mui/material";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
 
 const pages = [
   {
-    title: "Homme",
+    title: "Главная страница",
     link: "/",
   },
   {
-    title: "Product",
+    title: "Давай играть",
     link: "/list",
   },
 ];
 
 const adminPages = [
   {
-    title: "ADD PRODUCT",
+    title: "Добавим новые игры",
     link: "/add",
   },
 ];
@@ -67,7 +67,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar className="appbar" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <CatchingPokemonIcon
@@ -199,12 +199,16 @@ function Navbar() {
               size="large"
               color="inherit"
             >
-              {/* //! Корзина */}
+              {/* //! Корзина -оплата */}
 
               <Badge badgeContent={cartLenght} color="error">
                 <ShoppingBasketIcon />
               </Badge>
+              <Button component={Link} to="/pay" color="inherit">
+                <CreditScoreIcon />
+              </Button>
             </IconButton>
+
             {user ? (
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -244,7 +248,7 @@ function Navbar() {
                   logout();
                 }}
               >
-                <Typography textAlign="center">Logaut</Typography>
+                <Typography textAlign="center">Логин</Typography>
               </MenuItem>
             </Menu>
           </Box>
