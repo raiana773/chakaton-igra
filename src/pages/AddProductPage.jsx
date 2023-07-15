@@ -8,13 +8,13 @@ import {
   Select,
   TextField,
 } from "@mui/material";
-import games from "./image/games.jpg";
+// import games from "./image/games.jpg";
 import "./style.css";
 import React, { useState } from "react";
 import { useProductContext } from "../context/ProductContext";
 
 function AddProductPage() {
-  <img src={games} />;
+  // <img src={games} />;
   const { addProduct } = useProductContext();
   const [formValue, setFormValue] = useState({
     title: "",

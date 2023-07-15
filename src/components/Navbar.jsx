@@ -67,7 +67,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar className="appbar" position="static">
+    <AppBar className="appbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <CatchingPokemonIcon

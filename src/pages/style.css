@@ -38,6 +38,7 @@ img {
     rgba(51, 44, 156, 1) 50%,
     rgba(16, 21, 47, 1) 100%
   );
+  position: sticky;
 }
 /*? поменяли цвет текста input в AddProductpage */
 .css-1x51dt5-MuiInputBase-input-MuiInput-input {

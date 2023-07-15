@@ -10,12 +10,12 @@ import {
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useProductContext } from "../context/ProductContext";
-import { Player } from "video-react";
+// import { Player } from "video-react";
 import "./style.css";
-import details from "./image/games.jpg";
+// import details from "./image/games.jpg";
 
 function DetailsProductPage() {
-  <img src={details} />;
+  // <img src={details} />;
   const { oneProduct, getOneProduct } = useProductContext();
   const { id } = useParams();
   useEffect(() => {

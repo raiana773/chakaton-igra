@@ -3,10 +3,10 @@ import { useProductContext } from "../context/ProductContext";
 import { Box, Button, TextField } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import "./style.css";
-import papji from "./image/games.jpg";
+// import papji from "./image/games.jpg";
 
 function EditProductPage() {
-  <img src={papji} />;
+  // <img src={papji} />;
   const { oneProduct, getOneProduct, editProduct } = useProductContext();
 
   const { id } = useParams();

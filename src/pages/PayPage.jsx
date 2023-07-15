@@ -1,11 +1,11 @@
 import { Container } from "@mui/system";
 import React, { useState } from "react";
-import marvel from "./image/games.jpg";
+// import marvel from "./image/games.jpg";
 import { Height } from "@mui/icons-material";
 import { Box } from "@mui/material";
 
 function PayPage() {
-  <img src={marvel} />;
+  // <img src={marvel} />;
   const [cardNumber, setCardNumber] = useState("");
   const [expirationDate, setExpirationDate] = useState("");
   const [cvv, setCvv] = useState("");

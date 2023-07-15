@@ -15,10 +15,10 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Navigate } from "react-router-dom";
 import { useAuthContext } from "../context/AutContext";
 import "./style.css";
-import games from "./image/games.jpg";
+// import games from "./image/games.jpg";
 
 function Copyright(props) {
-  <img src={games} />;
+  // <img src={games} />;
   return (
     <Typography
       variant="body2"
